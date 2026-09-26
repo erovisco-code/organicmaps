@@ -73,7 +73,7 @@ jobs:
         shell: bash
         run: |
           shopt -s nullglob
-          apks=(android/app/build/outputs/apk/fdroid/beta/PUSHSTARTOffroad-*-fdroid-beta.apk)
+          apks=(android/app/build/outputs/apk/fdroid/beta/*.apk)
           [[ ${#apks[@]} -eq 1 ]] || {
             echo "Expected exactly one APK, found ${#apks[@]}" >&2
             exit 1
