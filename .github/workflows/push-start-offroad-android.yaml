@@ -48,14 +48,14 @@ jobs:
         with:
           key: ${{ github.workflow }}-fdroid-beta-arm64
 
-      - name: Configure test APK signing
+        - name: Configure test APK signing
         shell: bash
         run: |
           cat > android/app/secure.properties <<'EOF'
-         spropStoreFile = 'debug.keystore'
-spropStorePassword = '12345678'
-spropKeyAlias = 'debug'
-spropKeyPassword = '12345678'
+          spropStoreFile = 'debug.keystore'
+          spropStorePassword = '12345678'
+          spropKeyAlias = 'debug'
+          spropKeyPassword = '12345678'
           EOF
 
       - name: Build F-Droid Beta ARM64 APK
