@@ -47,10 +47,10 @@ jobs:
         shell: bash
         run: |
           cat > android/app/secure.properties <<'EOF'
-          spropStoreFile = 'debug.keystore'
-          spropStorePassword = '12345678'
-          spropKeyAlias = 'debug'
-          spropKeyPassword = '12345678'
+          ext.spropStoreFile = 'debug.keystore'
+          ext.spropStorePassword = '12345678'
+          ext.spropKeyAlias = 'debug'
+          ext.spropKeyPassword = '12345678'
           EOF
 
       - name: Build F-Droid Beta ARM64 APK
