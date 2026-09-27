@@ -61,24 +61,28 @@ jobs:
           CMAKE_CXX_COMPILER_LAUNCHER: ccache
         run: ./gradlew assembleFdroidBeta -Parm64
 
-      - name: Verify installable ARM64 APK
-        id: apk
+      - name: Find and verify APK
         shell: bash
         run: |
-          shopt -s nullglob
-          apks=(android/app/build/outputs/apk/**/*.apk)
+          echo "Searching for generated APK..."
+          find "$GITHUB_WORKSPACE/android" -type f -name "*.apk" -print
 
-          if [ ${#apks[@]} -eq 0 ]; then
-            echo "No APK found"
+          APK="$(find "$GITHUB_WORKSPACE/android" -type f -name "*.apk" | head -n 1)"
+
+          if [ -z "$APK" ]; then
+            echo "No APK found under android/"
             exit 1
           fi
 
-          printf '%s\n' "${apks[@]}"
-          sha256sum "${apks[@]}"
+          echo "APK found: $APK"
+          sha256sum "$APK"
+
+          mkdir -p "$GITHUB_WORKSPACE/apk-output"
+          cp "$APK" "$GITHUB_WORKSPACE/apk-output/PUSH-START-Offroad-ARM64.apk"
 
       - name: Upload installable APK
         uses: actions/upload-artifact@v4
         with:
           name: PUSH-START-Offroad-FDroid-Beta-ARM64
-          path: android/app/build/outputs/apk/**/*.apk
+          path: apk-output/PUSH-START-Offroad-ARM64.apk
           if-no-files-found: error
