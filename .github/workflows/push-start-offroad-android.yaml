@@ -41,8 +41,7 @@ jobs:
 
       - name: Parallel submodules checkout
         shell: bash
-        run: |
-          git submodule update --depth 1 --init --recursive --jobs="$(( $(nproc) * 20 ))"
+        run: git submodule update --depth 1 --init --recursive 
 
       - name: Configure ccache
         uses: hendrikmuhs/ccache-action@v1.2
