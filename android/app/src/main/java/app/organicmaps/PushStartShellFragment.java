@@ -28,29 +28,36 @@ public class PushStartShellFragment extends Fragment
     BottomNavigationView navigation = view.findViewById(R.id.push_start_navigation);
     navigation.setSelectedItemId(R.id.push_start_tab_map);
     navigation.setOnItemSelectedListener(item -> {
-      switch (item.getItemId())
+      final int itemId = item.getItemId();
+      if (itemId == R.id.push_start_tab_map)
       {
-      case R.id.push_start_tab_map:
+      {
         return true;
-      case R.id.push_start_tab_ride:
+      }
+      else if (itemId == R.id.push_start_tab_ride)
+      {
         RideDialogFragment.show(getParentFragmentManager());
         return true;
-      case R.id.push_start_tab_routes:
+      }
+      else if (itemId == R.id.push_start_tab_routes)
+      {
         BookmarkCategoriesActivity.start(requireActivity());
         return true;
-      case R.id.push_start_tab_navigation:
+      }
+      else if (itemId == R.id.push_start_tab_navigation)
+      {
         RoutingController controller = RoutingController.get();
         if (controller.isPlanning() || controller.isNavigating())
           ((MwmActivity) requireActivity()).updateMenu();
         else
           controller.prepare(null, null);
         return true;
-      case R.id.push_start_tab_connect:
+      }
+      else if (itemId == R.id.push_start_tab_connect)
+      {
         ConnectDialogFragment.show(getParentFragmentManager());
         return true;
-      default:
-        return false;
-      }
+      return false;
     });
   }
 }
