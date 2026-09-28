@@ -45324,3 +45324,81 @@ uk = Зупинити та зберегти
 vi = Dừng và lưu
 zh-Hans = 停止并保存
 zh-Hant = 停止並儲存
+
+[push_start_map]
+comment = Persistent PUSH START shell tab for the map.
+tags = android-app
+en = MAP
+pt = MAPA
+
+[push_start_ride]
+comment = Persistent PUSH START shell tab for ride recording.
+tags = android-app
+en = RIDE
+pt = RIDE
+
+[push_start_routes]
+comment = Persistent PUSH START shell tab for saved routes and bookmarks.
+tags = android-app
+en = ROUTES
+pt = ROTAS
+
+[push_start_navigation]
+comment = Persistent PUSH START shell tab for navigation.
+tags = android-app
+en = NAVIGATION
+pt = NAVEGAÇÃO
+
+[push_start_connect]
+comment = Persistent PUSH START shell tab for connection diagnostics.
+tags = android-app
+en = CONNECT
+pt = LIGAÇÃO
+
+[push_start_ride_recording_active]
+comment = Ride dialog message while track recording is active.
+tags = android-app
+en = A ride track is being recorded.
+pt = Está a ser gravado um percurso.
+
+[push_start_ride_recording_inactive]
+comment = Ride dialog message while track recording is inactive.
+tags = android-app
+en = Ready to record a ride.
+pt = Pronto para gravar um percurso.
+
+[push_start_record]
+comment = Starts recording a ride track.
+tags = android-app
+en = Start recording
+pt = Iniciar gravação
+
+[push_start_stop_recording]
+comment = Stops the current ride track recording without saving it.
+tags = android-app
+en = Stop recording
+pt = Parar gravação
+
+[push_start_save_stop]
+comment = Saves and stops the current ride track recording.
+tags = android-app
+en = Stop and save
+pt = Parar e guardar
+
+[push_start_connect_status]
+comment = Wi-Fi Direct and external display diagnostics; no data is streamed.
+tags = android-app
+en = Wi-Fi Direct support: %1$s\nExternal displays available: %2$d\n\nDiagnostics only. No streaming or ARVAIR protocol is implemented.
+pt = Suporte para Wi-Fi Direct: %1$s\nEcrãs externos disponíveis: %2$d\n\nApenas diagnóstico. Não existe transmissão nem protocolo ARVAIR implementado.
+
+[push_start_supported]
+comment = Device feature availability status.
+tags = android-app
+en = Supported
+pt = Disponível
+
+[push_start_not_supported]
+comment = Device feature availability status.
+tags = android-app
+en = Not supported
+pt = Não disponível

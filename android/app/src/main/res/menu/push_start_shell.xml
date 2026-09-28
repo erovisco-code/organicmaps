@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+    android:id="@+id/push_start_tab_map"
+    android:title="@string/push_start_map" />
+  <item
+    android:id="@+id/push_start_tab_ride"
+    android:title="@string/push_start_ride" />
+  <item
+    android:id="@+id/push_start_tab_routes"
+    android:title="@string/push_start_routes" />
+  <item
+    android:id="@+id/push_start_tab_navigation"
+    android:title="@string/push_start_navigation" />
+  <item
+    android:id="@+id/push_start_tab_connect"
+    android:title="@string/push_start_connect" />
+</menu>

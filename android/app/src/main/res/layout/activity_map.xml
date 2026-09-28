@@ -47,6 +47,13 @@
       android:layout_height="match_parent"
       android:paddingBottom="@dimen/margin_base"
       android:visibility="invisible" />
+
+    <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/push_start_shell"
+      android:name="app.organicmaps.PushStartShellFragment"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/push_start_shell_height"
+      android:layout_alignParentBottom="true" />
   </RelativeLayout>
   <androidx.fragment.app.FragmentContainerView
     android:id="@+id/search_container_fragment"
