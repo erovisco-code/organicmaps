@@ -24,17 +24,19 @@ public class RideDialogFragment extends DialogFragment
   {
     boolean isRecording = TrackRecorder.nativeIsTrackRecordingEnabled();
     MwmActivity activity = (MwmActivity) requireActivity();
-    MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(activity, R.style.MwmTheme_AlertDialog)
-        .setTitle(R.string.push_start_ride)
-        .setMessage(isRecording ? R.string.push_start_ride_recording_active : R.string.push_start_ride_recording_inactive)
-        .setNegativeButton(R.string.cancel, null)
-        .setPositiveButton(isRecording ? R.string.push_start_stop_recording : R.string.push_start_record,
-                           (dialog, which) -> {
-                             if (isRecording)
-                               activity.onTrackRecordingCancelled();
-                             else
-                               activity.onRideRecordButtonClicked();
-                           });
+    MaterialAlertDialogBuilder builder =
+        new MaterialAlertDialogBuilder(activity, R.style.MwmTheme_AlertDialog)
+            .setTitle(R.string.push_start_ride)
+            .setMessage(isRecording ? R.string.push_start_ride_recording_active
+                                    : R.string.push_start_ride_recording_inactive)
+            .setNegativeButton(R.string.cancel, null)
+            .setPositiveButton(isRecording ? R.string.push_start_stop_recording : R.string.push_start_record,
+                               (dialog, which) -> {
+                                 if (isRecording)
+                                   activity.onTrackRecordingCancelled();
+                                 else
+                                   activity.onRideRecordButtonClicked();
+                               });
     if (isRecording)
       builder.setNeutralButton(R.string.push_start_save_stop, (dialog, which) -> activity.onTrackRecordingSaved());
     return builder.create();

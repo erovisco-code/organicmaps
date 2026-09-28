@@ -28,7 +28,8 @@ public class ConnectDialogFragment extends DialogFragment
     boolean supportsWifiDirect = context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_WIFI_DIRECT);
     DisplayManager displayManager = (DisplayManager) context.getSystemService(Context.DISPLAY_SERVICE);
     int presentationDisplays = displayManager.getDisplays(DisplayManager.DISPLAY_CATEGORY_PRESENTATION).length;
-    CharSequence wifiStatus = getText(supportsWifiDirect ? R.string.push_start_supported : R.string.push_start_not_supported);
+    CharSequence wifiStatus =
+        getText(supportsWifiDirect ? R.string.push_start_supported : R.string.push_start_not_supported);
     String status = getString(R.string.push_start_connect_status, wifiStatus, presentationDisplays);
 
     return new MaterialAlertDialogBuilder(context, R.style.MwmTheme_AlertDialog)

@@ -31,34 +31,34 @@ public class PushStartShellFragment extends Fragment
       final int itemId = item.getItemId();
       if (itemId == R.id.push_start_tab_map)
       {
-      {
-        return true;
-      }
-      else if (itemId == R.id.push_start_tab_ride)
-      {
-        RideDialogFragment.show(getParentFragmentManager());
-        return true;
-      }
-      else if (itemId == R.id.push_start_tab_routes)
-      {
-        BookmarkCategoriesActivity.start(requireActivity());
-        return true;
-      }
-      else if (itemId == R.id.push_start_tab_navigation)
-      {
-        RoutingController controller = RoutingController.get();
-        if (controller.isPlanning() || controller.isNavigating())
-          ((MwmActivity) requireActivity()).updateMenu();
-        else
-          controller.prepare(null, null);
-        return true;
-      }
-      else if (itemId == R.id.push_start_tab_connect)
-      {
-        ConnectDialogFragment.show(getParentFragmentManager());
-        return true;
+        {
+          return true;
+        }
+        else if (itemId == R.id.push_start_tab_ride)
+        {
+          RideDialogFragment.show(getParentFragmentManager());
+          return true;
+        }
+        else if (itemId == R.id.push_start_tab_routes)
+        {
+          BookmarkCategoriesActivity.start(requireActivity());
+          return true;
+        }
+        else if (itemId == R.id.push_start_tab_navigation)
+        {
+          RoutingController controller = RoutingController.get();
+          if (controller.isPlanning() || controller.isNavigating())
+            ((MwmActivity) requireActivity()).updateMenu();
+          else
+            controller.prepare(null, null);
+          return true;
+        }
+        else if (itemId == R.id.push_start_tab_connect)
+        {
+          ConnectDialogFragment.show(getParentFragmentManager());
+          return true;
         }
         return false;
-    });
+      });
   }
-}
+  }
