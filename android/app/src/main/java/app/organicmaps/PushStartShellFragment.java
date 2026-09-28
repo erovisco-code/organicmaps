@@ -57,7 +57,8 @@ public class PushStartShellFragment extends Fragment
       {
         ConnectDialogFragment.show(getParentFragmentManager());
         return true;
-      return false;
+        }
+        return false;
     });
   }
 }
