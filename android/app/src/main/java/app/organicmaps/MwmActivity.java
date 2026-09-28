@@ -2065,6 +2065,12 @@ public class MwmActivity extends BaseMwmFragmentActivity
       startTrackRecording();
   }
 
+  public void onRideRecordButtonClicked()
+  {
+    if (!TrackRecorder.nativeIsTrackRecordingEnabled())
+      startTrackRecording();
+  }
+
   private void toggleTrackRecordingPP()
   {
     if (mPlacePageViewModel.getMapObject().getValue() != null

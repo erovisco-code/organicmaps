@@ -115,6 +115,7 @@
   <dimen name="map_button_size">48dp</dimen>
   <dimen name="map_button_icon_size">32dp</dimen>
   <dimen name="map_button_arrow_icon_size">34dp</dimen>
+  <dimen name="push_start_shell_height">64dp</dimen>
 
   <!-- routing layout -->
   <dimen name="routing_transit_step_corner_radius">4dp</dimen>

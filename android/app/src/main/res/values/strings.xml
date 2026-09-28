@@ -952,4 +952,17 @@
     <string name="choose_point_on_map_hint">Move and zoom the map to place the cross</string>
     <!-- Track recording notification button: stops the recording and saves the recorded track. -->
     <string name="track_recording_stop_and_save">Stop and Save</string>
+    <string name="push_start_map">MAP</string>
+    <string name="push_start_ride">RIDE</string>
+    <string name="push_start_routes">ROUTES</string>
+    <string name="push_start_navigation">NAVIGATION</string>
+    <string name="push_start_connect">CONNECT</string>
+    <string name="push_start_ride_recording_active">A ride track is being recorded.</string>
+    <string name="push_start_ride_recording_inactive">Ready to record a ride.</string>
+    <string name="push_start_record">Start recording</string>
+    <string name="push_start_stop_recording">Stop recording</string>
+    <string name="push_start_save_stop">Stop and save</string>
+    <string name="push_start_connect_status">Wi-Fi Direct support: %1$s\nExternal displays available: %2$d\n\nDiagnostics only. No streaming or ARVAIR protocol is implemented.</string>
+    <string name="push_start_supported">Supported</string>
+    <string name="push_start_not_supported">Not supported</string>
 </resources>

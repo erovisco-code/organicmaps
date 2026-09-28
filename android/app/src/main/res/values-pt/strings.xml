@@ -958,4 +958,17 @@
     <string name="choose_point_on_map_hint">Mova e amplie o mapa para posicionar a cruz</string>
     <!-- Track recording notification button: stops the recording and saves the recorded track. -->
     <string name="track_recording_stop_and_save">Parar e guardar</string>
+    <string name="push_start_map">MAPA</string>
+    <string name="push_start_ride">RIDE</string>
+    <string name="push_start_routes">ROTAS</string>
+    <string name="push_start_navigation">NAVEGAÇÃO</string>
+    <string name="push_start_connect">LIGAÇÃO</string>
+    <string name="push_start_ride_recording_active">Está a ser gravado um percurso.</string>
+    <string name="push_start_ride_recording_inactive">Pronto para gravar um percurso.</string>
+    <string name="push_start_record">Iniciar gravação</string>
+    <string name="push_start_stop_recording">Parar gravação</string>
+    <string name="push_start_save_stop">Parar e guardar</string>
+    <string name="push_start_connect_status">Suporte para Wi-Fi Direct: %1$s\nEcrãs externos disponíveis: %2$d\n\nApenas diagnóstico. Não existe transmissão nem protocolo ARVAIR implementado.</string>
+    <string name="push_start_supported">Disponível</string>
+    <string name="push_start_not_supported">Não disponível</string>
 </resources>
